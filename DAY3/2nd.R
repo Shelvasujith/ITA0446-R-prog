@@ -1,0 +1,10 @@
+library(reshape)
+library(dplyr)
+a=mtcars
+dim(a)
+summary(a)
+c=sapply(a, function(x)class(x))
+print(c)
+print(aggregate(a$wt,list(a$vs),mean))
+print(aggregate(a$wt,list(a$vs),max))
+print(aggregate(a$wt,list(a$vs),min))
